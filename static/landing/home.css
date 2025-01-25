@@ -1,0 +1,201 @@
+:root
+{
+    --bg: radial-gradient(circle at 10% 20%, rgb(255, 197, 61) 0%, rgb(255, 94, 7) 90%); 
+
+    --time: 24s;
+}
+
+/* .gradient
+{
+    background-image: linear-gradient(90deg, blue, red);
+    background-clip: text;
+    background-size: 150%;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 1s linear infinite;
+} */
+/* 
+@keyframes gradient
+{
+    to{background-position: -200%;}
+} */
+
+.up
+{
+    animation: sliderup var(--time) infinite linear
+}
+
+.down
+{
+    animation: sliderdown var(--time) infinite linear
+}
+
+.img-box
+{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.img-box img
+{
+    max-width: 120px;
+    border-radius: 12px;
+}
+
+/*calc(-100% - 16px)*/
+@keyframes sliderup
+{
+    to{transform: translateY(calc(-100% + 30rem));}
+}
+
+@keyframes sliderdown
+{
+    to{transform: translateY(calc(100% - 30rem));}
+}
+
+
+section.teachers-section
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    max-width: 72%;
+    height: auto;
+    
+    padding: 240px 6px;
+    gap: 0.5rem;
+    grid-template-areas: 
+        "first-block third-block fourth-block fourth-block"
+        "second-block third-block fifth-block fifth-block"
+    ;
+}
+
+div.first-block
+{
+    grid-area: first-block;
+}
+div.second-block
+{
+    grid-area: second-block;
+}
+div.third-block
+{
+    grid-area: third-block;
+}
+div.fourth-block
+{
+    grid-area: fourth-block;
+}
+div.fifth-block
+{
+    grid-area: fifth-block;
+    background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+}
+
+b.quality
+{
+    background-image: linear-gradient(to right, rgb(112, 233, 242), rgb(192, 114, 255));
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+b.quality-2
+{
+    background-image: linear-gradient(to right, rgb(242, 112, 112), rgb(255, 166, 114));
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+div.collage
+{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: 
+
+        ".. two two two three four ..  .."
+        "one two two two five five six  .."
+        ".. two two two five five seven eight"
+        "nine ten eleven eleven twelve .. ..  .."
+        ".. .. eleven eleven .. .. ..  .."
+    ;
+    margin-inline: auto;
+    gap: 0.5rem;
+}
+
+div.collage > div
+{
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+div.collage img
+{
+    width: 100%;
+    aspect-ratio: 1;
+    display: block;
+    object-fit: cover;
+}
+
+div.collage :nth-child(1)
+{
+    grid-area: one;
+}
+div.collage :nth-child(2)
+{
+    grid-area: two;
+}
+div.collage :nth-child(3)
+{
+    grid-area: three;
+}
+div.collage :nth-child(4)
+{
+    grid-area: four;
+    background: #ffecc3;
+    border-bottom-right-radius: 100%;
+}
+div.collage :nth-child(5)
+{
+    grid-area: five;
+}
+div.collage :nth-child(6)
+{
+    grid-area: six;
+    background: #ccf0ee;
+    border-top-right-radius: 100%;
+}
+div.collage :nth-child(7)
+{
+    grid-area: seven;
+}
+div.collage :nth-child(8)
+{
+    grid-area: eight;
+    background: #cdd7f0;
+    border-radius: 100%;
+}
+div.collage :nth-child(9)
+{
+    grid-area: nine;
+    background: #ffdce0;
+    border-top-left-radius: 100%;
+}
+div.collage :nth-child(10)
+{
+    grid-area: ten;
+}
+div.collage :nth-child(11)
+{
+    grid-area: eleven;
+}
+div.collage :nth-child(12)
+{
+    grid-area: twelve;
+}

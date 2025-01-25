@@ -1,0 +1,56 @@
+
+
+
+
+
+
+body
+{
+    display: grid;
+    grid-template-columns: 12rem 1fr;
+    grid-template-areas:
+        "aside main"
+    ;
+    min-height: 100vh;
+    gap: 0.5rem;
+}
+
+aside
+{
+    grid-area: aside;
+}
+
+main
+{
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+        "up up up up"
+        "middle middle middle middle"
+        "down down down down"
+    ;
+    gap: 0.4rem;
+    height: 100vh;
+    grid-area: main;
+}
+
+
+div.up
+{
+    grid-area: up;
+}
+
+div.middle
+{
+    grid-area: middle;
+}
+
+div.down
+{
+    grid-area: down;
+    height: 100%;
+    /* background: #fff; */
+    border: 3px solid #0c0c0c;
+    overflow: auto;
+}

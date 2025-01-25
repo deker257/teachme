@@ -1,0 +1,63 @@
+
+
+
+
+
+
+body
+{
+    display: grid;
+    grid-template-columns: 9rem 1fr;
+    grid-template-areas:
+        "aside main"
+    ;
+    min-height: 100vh;
+}
+
+
+aside
+{
+    grid-area: aside;
+    
+}
+
+
+main
+{
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    grid-template-columns: 33rem 1fr;
+    grid-template-areas: 
+        "courses-section courses-section video-section video-section"
+        "middle middle middle middle"
+        "down down down down"
+    ;
+    gap: 0.4rem;
+    height: 100vh;
+    overflow: h;
+    grid-area: main;
+}
+
+
+section.video-section
+{
+    grid-area: video-section;
+    height: 100vh;
+    overflow: hidden;
+}
+
+section.courses-section
+{
+    grid-area: courses-section;
+    height: 100vh;
+    overflow: auto;
+}
+
+div.down
+{
+    grid-area: down;
+    height: 100%;
+    background: #fff;
+    border: 12px solid #fff;
+    overflow: auto;
+}

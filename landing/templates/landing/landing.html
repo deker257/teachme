@@ -1,0 +1,453 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teachme : Plateforme d'e-learning</title>
+
+    <!-- FAVICON FONTS -->
+    <link rel="icon" href="{% static "image/teachme-icon.png" %}" type="image/x-icon">
+
+    <!-- GOOGLE FONTS LINK -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    {% comment %} <link rel="stylesheet" href="{% static 'landing/style.css' %}"> {% endcomment %}
+
+    <!-- TAILWIND CSS LINKS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<!-- bg-teal-900 bg-white bg-black  leading-tight text-white bg-cyan-900 bg-sky-900-->
+<body class="w-full m-0 p-0 overflow-x-hidden bg-black font-[Poppins]">
+    <!-- gradient-to-b from-indigo-400 to-indigo-900 -->
+
+    <header class="fixed top-0 left-0 w-full flex items-center justify-between overflow-hidden px-4 py-2 z-50 space-x-6">
+        <div><a href="{% url 'landing' %}" class="font-[Oswald] font-extrabold text-teal-900 text-2xl">teach<b class="text-red-500">me</b></a></div>
+        <div class="bg-cyan-500 rounded-full py-2 px-4 profile flex items-center justify-end">
+            <div class="icon_box flex items-center justify-center space-x-4">
+                <div><i class="fa-solid fa-bell text-lg text-rose-500"></i></div>
+                <div><a href=""><i class="fa-solid fa-user text-white"></i></a></div>
+                <div><i class="fa-solid fa-caret-down text-cyan-900 text-xl"></i></div>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="absolute top-0 right-5 gap-x-2 px-3 flex items-center justify-center h-[100vh] overflow-hidden">
+
+        <div class="down-box gap-y-2 flex flex-col items-center justify-center">
+            <div class="img-box down">
+                <img src="{% static 'image/img-1.jpg' %}" alt="">
+                <img src="{% static 'image/img-2.jpg' %}" alt="">
+                <img src="{% static 'image/img-3.jpg' %}" alt="">
+                <img src="{% static 'image/img-4.jpg' %}" alt="">
+                <img src="{% static 'image/img-5.jpg' %}" alt="">
+                <img src="{% static 'image/img-6.jpg' %}" alt="">
+                <img src="{% static 'image/img-7.jpg' %}" alt="">
+                <img src="{% static 'image/img-8.jpg' %}" alt="">
+                <img src="{% static 'image/img-9.jpg' %}" alt="">
+                <img src="{% static 'image/img-10.jpg' %}" alt="">
+                <img src="{% static 'image/img-11.jpg' %}" alt="">
+            </div>
+
+            <div class="img-box down">
+                <img src="{% static 'image/img-1.jpg' %}" alt="">
+                <img src="{% static 'image/img-2.jpg' %}" alt="">
+                <img src="{% static 'image/img-3.jpg' %}" alt="">
+                <img src="{% static 'image/img-4.jpg' %}" alt="">
+                <img src="{% static 'image/img-5.jpg' %}" alt="">
+                <img src="{% static 'image/img-6.jpg' %}" alt="">
+                <img src="{% static 'image/img-7.jpg' %}" alt="">
+                <img src="{% static 'image/img-8.jpg' %}" alt="">
+                <img src="{% static 'image/img-9.jpg' %}" alt="">
+                <img src="{% static 'image/img-10.jpg' %}" alt="">
+                <img src="{% static 'image/img-11.jpg' %}" alt="">
+            </div>
+        </div>
+
+        <div class="up-box gap-y-2 flex flex-col items-center justify-center">
+            <div class="img-box up">
+                <img src="{% static 'image/img-1.jpg' %}" alt="">
+                <img src="{% static 'image/img-2.jpg' %}" alt="">
+                <img src="{% static 'image/img-3.jpg' %}" alt="">
+                <img src="{% static 'image/img-4.jpg' %}" alt="">
+                <img src="{% static 'image/img-5.jpg' %}" alt="">
+                <img src="{% static 'image/img-6.jpg' %}" alt="">
+                <img src="{% static 'image/img-7.jpg' %}" alt="">
+                <img src="{% static 'image/img-8.jpg' %}" alt="">
+                <img src="{% static 'image/img-9.jpg' %}" alt="">
+                <img src="{% static 'image/img-10.jpg' %}" alt="">
+                <img src="{% static 'image/img-11.jpg' %}" alt="">
+            </div>
+
+            <div class="img-box up">
+                <img src="{% static 'image/img-1.jpg' %}" alt="">
+                <img src="{% static 'image/img-2.jpg' %}" alt="">
+                <img src="{% static 'image/img-3.jpg' %}" alt="">
+                <img src="{% static 'image/img-4.jpg' %}" alt="">
+                <img src="{% static 'image/img-5.jpg' %}" alt="">
+                <img src="{% static 'image/img-6.jpg' %}" alt="">
+                <img src="{% static 'image/img-7.jpg' %}" alt="">
+                <img src="{% static 'image/img-8.jpg' %}" alt="">
+                <img src="{% static 'image/img-9.jpg' %}" alt="">
+                <img src="{% static 'image/img-10.jpg' %}" alt="">
+                <img src="{% static 'image/img-11.jpg' %}" alt="">
+            </div>
+        </div>
+
+        <div class="down-box gap-y-2 flex flex-col items-center justify-center">
+            <div class="img-box down">
+                <img src="{% static 'image/img-1.jpg' %}" alt="">
+                <img src="{% static 'image/img-2.jpg' %}" alt="">
+                <img src="{% static 'image/img-3.jpg' %}" alt="">
+                <img src="{% static 'image/img-4.jpg' %}" alt="">
+                <img src="{% static 'image/img-5.jpg' %}" alt="">
+                <img src="{% static 'image/img-6.jpg' %}" alt="">
+                <img src="{% static 'image/img-7.jpg' %}" alt="">
+                <img src="{% static 'image/img-8.jpg' %}" alt="">
+                <img src="{% static 'image/img-9.jpg' %}" alt="">
+                <img src="{% static 'image/img-10.jpg' %}" alt="">
+                <img src="{% static 'image/img-11.jpg' %}" alt="">
+            </div>
+
+            <div class="img-box down">
+                <img src="{% static 'image/img-1.jpg' %}" alt="">
+                <img src="{% static 'image/img-2.jpg' %}" alt="">
+                <img src="{% static 'image/img-3.jpg' %}" alt="">
+                <img src="{% static 'image/img-4.jpg' %}" alt="">
+                <img src="{% static 'image/img-5.jpg' %}" alt="">
+                <img src="{% static 'image/img-6.jpg' %}" alt="">
+                <img src="{% static 'image/img-7.jpg' %}" alt="">
+                <img src="{% static 'image/img-8.jpg' %}" alt="">
+                <img src="{% static 'image/img-9.jpg' %}" alt="">
+                <img src="{% static 'image/img-10.jpg' %}" alt="">
+                <img src="{% static 'image/img-11.jpg' %}" alt="">
+            </div>
+        </div>
+
+    </section>
+
+    <main class="mt-40 flex flex-col justify-center items-center max-w-full">
+
+        <section class="min-w-full">
+            <div class="max-full flex flex-col justify-between gap-y-12 items-start h-full px-5 text-white">
+                <div class="flex items-start max-w-full justify-start">
+                    <b class="font-extrabold font-[Oswald] text-5xl text-start max-w-full">Bienvenue sur <b class="text-teal-900">teach</b><b class="text-red-500">me</b>, <br> votre plateforme d'E-learning N°1 au <b class="gradient">Maroc</b>.</b>
+                </div>
+                <div class="flex items-start max-w-[600px] justify-start">
+                    <b class="font-normal text-sm text-justify">Accédez à plus de 200 cours enregistrés et en ligne tout module confondu et ce, quelle que soit la filière. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, facilis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores eaque nisi fuga, iure veniam natus.
+                    <br> <br>
+                    Accéder dès maintenant en cliquant sur le bouton ci-dessous !
+                    </b>
+                </div>
+                <div>
+                    <a href="#" class="text-white bg-cyan-700 hover:brightness-75 rounded-lg py-2 px-12">Accéder aux cours <i class="fa-solid fa-arrow-right ml-2 text-rose-900 font-extrabold"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEACHERS SECTION -->
+        <section class="mt-28 min-w-full flex items-center justify-center bg-gradient-to-t from-white ">
+            <section class="teachers-section flex flex-col">
+
+                <div class="first-block flex flex-col items-start justify-center rounded-lg border-[#121212] p-2">
+                    <b class="text-xl text-white text-start">
+                        Faites-vous former par nos enseignants de <b class="quality">Qualité</b> aux <b class="quality">quatre</b> coins du monde.
+                    </b>
+                </div>
+
+                <div class="relative second-block block items-center justify-center rounded-lg border-8 border-[#121212] "><img src="{% static 'image/teachers/teacher-7.jpg' %}" alt="" class="teachers-picture w-full h-full object-cover">
+                    <div class="absolute top-2 left-2 flex flex-col justify-between w-full h-full py-3">
+                        <div class="flex flex-col">
+                            <b class="text-white">Aïssatou Mohammed</b>
+                            <b class="text-white font-normal ">Data engineer</b>
+                        </div>
+                        <b class="text-white w-max bg-gradient-to-r from-indigo-500">Université d'Oxford</b>
+                    </div>
+                </div>
+
+                <div class="relative third-block flex items-end justify-center rounded-lg border-8 border-[#121212] "><img src="{% static 'image/teachers/teacher-4.jpg' %}" alt="" class="teachers-picture rounded-lg w-full h-full object-cover">
+                    <div class="absolute top-2 left-2 flex flex-col py-3">
+                        <div class="flex flex-col">
+                            <b class="text-white">Sanaa Aidi</b>
+                            <b class="text-white font-normal ">Mobile devlopper</b>
+                            <b class="text-white w-max bg-gradient-to-r from-teal-500">Apple</b>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative fourth-block flex items-center justify-center rounded-lg border-8 border-[#121212] "><img src="{% static 'image/teachers/teacher-3.jpg' %}" alt="" class="teachers-picture w-full h-full object-cover">
+                    <div class="absolute top-2 right-2 flex flex-col py-3">
+                        <div class="flex flex-col">
+                            <b class="text-white">KC Johns</b>
+                            <b class="text-white font-normal ">UI/UX designer</b>
+                            <b class="text-white w-max bg-gradient-to-r from-amber-500">Dior</b>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative fifth-block flex items-end justify-center rounded-lg border-8 border-[#121212]"><img src="{% static 'image/teachers/teacher-5.jpg' %}" alt="" class="teachers-picture rounded-lg">
+                    <div class="absolute bottom-2 right-2 flex flex-col py-3">
+                        <div class="flex flex-col">
+                            <b class="text-white">Idryss Hakimi</b>
+                            <b class="text-white font-normal ">Web devlopper</b>
+                            <b class="text-white w-max bg-gradient-to-r from-red-500">Google</b>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </section>
+
+        <!-- COURSES SECTION -->
+        <section class="bg-[#F0F0F0] flex flex-col min-w-full ">
+
+            <!-- BEST RATED -->
+            <section class="best-rated flex flex-col items-center justify-center min-w-full gap-y-6 py-[120px]">
+                <div class="text min-w-full text-center flex items-center justify-start px-12">
+                    <div class="w-[83%] flex items-center justify-between">
+                        <b class="text-start text-2xl">New <b class="text-green-600">Courses</b></b>
+                        <b class="text-start text-2xl"><i class="fa-solid fa-plus text-green-600"></i></b>
+                    </div>
+                </div>
+
+                <div class="best-rated-cards min-w-full flex items-center justify-start space-x-4 pl-12">
+                    <!-- COURSES #1 -->
+                    <div class="flex flex-col bg-white p-2 rounded-lg">
+                        <div class="block w-[240px] h-[150px]">
+                            <a href="courses-details/"><img src="{% static 'image/courses/python-2.jpg' %}" alt="" class="w-full h-full rounded-lg object-cover hover:brightness-75"></a>
+                        </div>
+                        <div class="description flex flex-col">
+                            <div class="course-name w-full flex items-center justify-between">
+                                <b class="">Python courses</b>
+                                <b class="text-xs text-yellow-400">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </b>
+                            </div>
+                            <b class="teacher-name text-gray-300 font-normal">Pf Davina Dako</b>
+                            <b class="hours-package text-sm font-light">
+                                12 heures
+                            </b>
+                        </div>
+                    </div>
+                    <div class="flex flex-col bg-white p-2 rounded-lg">
+                        <div class="block w-[240px] h-[150px]">
+                            <a href="courses-details/"><img src="{% static 'image/courses/python-2.jpg' %}" alt="" class="w-full h-full rounded-lg object-cover hover:brightness-75"></a>
+                        </div>
+                        <div class="description flex flex-col">
+                            <div class="course-name w-full flex items-center justify-between">
+                                <b class="">Python courses</b>
+                                <b class="text-xs text-yellow-400">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </b>
+                            </div>
+                            <b class="teacher-name text-gray-300 font-normal">Pf Davina Dako</b>
+                            <b class="hours-package text-sm font-light">
+                                12 heures
+                            </b>
+                        </div>
+                    </div>
+                    <div class="flex flex-col bg-white p-2 rounded-lg">
+                        <div class="block w-[240px] h-[150px]">
+                            <a href="courses-details/"><img src="{% static 'image/courses/python-2.jpg' %}" alt="" class="w-full h-full rounded-lg object-cover hover:brightness-75"></a>
+                        </div>
+                        <div class="description flex flex-col">
+                            <div class="course-name w-full flex items-center justify-between">
+                                <b class="">Python courses</b>
+                                <b class="text-xs text-yellow-400">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </b>
+                            </div>
+                            <b class="teacher-name text-gray-300 font-normal">Pf Davina Dako</b>
+                            <b class="hours-package text-sm font-light">
+                                12 heures
+                            </b>
+                        </div>
+                    </div>
+                    <div class="flex flex-col bg-white p-2 rounded-lg">
+                        <div class="block w-[240px] h-[150px]">
+                            <a href="courses-details/"><img src="{% static 'image/courses/python-2.jpg' %}" alt="" class="w-full h-full rounded-lg object-cover hover:brightness-75"></a>
+                        </div>
+                        <div class="description flex flex-col">
+                            <div class="course-name w-full flex items-center justify-between">
+                                <b class="">Python courses</b>
+                                <b class="text-xs text-yellow-400">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </b>
+                            </div>
+                            <b class="teacher-name text-gray-300 font-normal">Pf Davina Dako</b>
+                            <b class="hours-package text-sm font-light">
+                                12 heures
+                            </b>
+                        </div>
+                    </div>
+
+                    <div class="items-center justify-center flex w-[240px] h-[150px]">
+                        <div class="flex border-2 border-black rounded-full w-16 h-12 content-center items-center justify-center cursor-pointer hover:bg-rose-400 mb-12">
+                            <a href=""><b class="text-3xl"><i class="fa-solid fa-arrow-right"></i></b></a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="text min-w-full text-center flex items-center justify-start px-12">
+                    <div class="w-[83%] flex items-center justify-between">
+                        <b class="text-start text-2xl">Best <b class="text-red-600">Rated</b> Courses</b>
+                        <b class="text-start text-2xl"><i class="fa-regular fa-thumbs-up text-red-600"></i></b>
+                    </div>
+                </div>
+                <div class="best-rated-cards min-w-full flex items-center justify-start space-x-4 pl-12">
+                    <!-- COURSES #1 -->
+                    <div class="flex flex-col bg-white p-2 rounded-lg">
+                        <div class="block w-[240px] h-[150px]">
+                            <a href="courses-details/"><img src="{% static 'image/courses/python-2.jpg' %}" alt="" class="w-full h-full rounded-lg object-cover hover:brightness-75"></a>
+                        </div>
+                        <div class="description flex flex-col">
+                            <div class="course-name w-full flex items-center justify-between">
+                                <b class="">Python courses</b>
+                                <b class="text-xs text-yellow-400">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </b>
+                            </div>
+                            <b class="teacher-name text-gray-300 font-normal">Pf Davina Dako</b>
+                            <b class="hours-package text-sm font-light">
+                                12 heures
+                            </b>
+                        </div>
+                    </div>
+                    <div class="flex flex-col bg-white p-2 rounded-lg">
+                        <div class="block w-[240px] h-[150px]">
+                            <a href="courses-details/"><img src="{% static 'image/courses/python-2.jpg' %}" alt="" class="w-full h-full rounded-lg object-cover hover:brightness-75"></a>
+                        </div>
+                        <div class="description flex flex-col">
+                            <div class="course-name w-full flex items-center justify-between">
+                                <b class="">Python courses</b>
+                                <b class="text-xs text-yellow-400">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </b>
+                            </div>
+                            <b class="teacher-name text-gray-300 font-normal">Pf Davina Dako</b>
+                            <b class="hours-package text-sm font-light">
+                                12 heures
+                            </b>
+                        </div>
+                    </div>
+                    <div class="flex flex-col bg-white p-2 rounded-lg">
+                        <div class="block w-[240px] h-[150px]">
+                            <a href="courses-details/"><img src="{% static 'image/courses/python-2.jpg' %}" alt="" class="w-full h-full rounded-lg object-cover hover:brightness-75"></a>
+                        </div>
+                        <div class="description flex flex-col">
+                            <div class="course-name w-full flex items-center justify-between">
+                                <b class="">Python courses</b>
+                                <b class="text-xs text-yellow-400">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </b>
+                            </div>
+                            <b class="teacher-name text-gray-300 font-normal">Pf Davina Dako</b>
+                            <b class="hours-package text-sm font-light">
+                                12 heures
+                            </b>
+                        </div>
+                    </div>
+                    <div class="flex flex-col bg-white p-2 rounded-lg">
+                        <div class="block w-[240px] h-[150px]">
+                            <a href="courses-details/"><img src="{% static 'image/courses/python-2.jpg' %}" alt="" class="w-full h-full rounded-lg object-cover hover:brightness-75"></a>
+                        </div>
+                        <div class="description flex flex-col">
+                            <div class="course-name w-full flex items-center justify-between">
+                                <b class="">Python courses</b>
+                                <b class="text-xs text-yellow-400">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </b>
+                            </div>
+                            <b class="teacher-name text-gray-300 font-normal">Pf Davina Dako</b>
+                            <b class="hours-package text-sm font-light">
+                                12 heures
+                            </b>
+                        </div>
+                    </div>
+
+                    <div class="items-center justify-center flex w-[240px] h-[150px]">
+                        <div class="flex border-2 border-black rounded-full w-16 h-12 content-center items-center justify-center cursor-pointer hover:bg-rose-400 mb-12">
+                            <a href=""><b class="text-3xl"><i class="fa-solid fa-arrow-right"></i></b></a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </section>
+
+        <section class="relative students-section bg-white p-12 flex flex-col min-w-full">
+
+            <div class="collage max-w-[800px]">
+
+                <div class="block"><img src="{% static 'image/img-5.jpg' %}" alt=""></div>
+                <div class="block"><img src="{% static 'image/img-10.jpg' %}" alt=""></div>
+                <div class="block"><img src="{% static 'image/img-8.jpg' %}" alt=""></div>
+                <div aria-hidden="true" class="block"></div>
+                <div class="block"><img src="{% static 'image/student.jpg' %}" alt=""></div>
+                <div aria-hidden="true" class="block"></div>
+                <div class="block"><img src="{% static 'image/img-6.jpg' %}" alt=""></div>
+                <div aria-hidden="true" class="block"></div>
+                <div aria-hidden="true" class="block"></div>
+                <div class="block"><img src="{% static 'image/img-2.jpg' %}" alt=""></div>
+                <div class="block"><img src="{% static 'image/girl-2.jpg' %}" alt=""></div>
+                <div class="block"><img src="{% static 'image/teacher-6.jpg' %}" alt=""></div>
+            </div>
+            <div class="absolute top-72 left-16">
+                <b class="text-2xl text-black">+200 étudiants à travers <br> le royaume nous </b>
+            </div>
+            <div class="absolute bottom-32 right-48">
+                <b class="text-xl text-black">de plus d'une centaine <br> d'universités collaboratives</b>
+            </div>
+        </section>
+    </main>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

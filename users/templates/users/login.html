@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'enregistrement</title>
+
+    <!-- GOOGLE FONTS LINK -->
+    <link rel="icon" href="{% static 'image/teachme-icon.png' %}" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- TAILWIND CSS LINKS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#1E1F20]"> {% comment %}026871 border-8 border-[#021024]{% endcomment %}
+
+    <div class="form-container w-full flex items-center justify-center h-[100vh]">
+        <section class="w-[75%] rounded-3xl flex items-start justify-center bg-[#0E0E0E] h-max overflow-auto py-4 px-3">
+            <div class="flex flex-col pl-2 pt-3 gap-y-3 w-full text-white">
+                <div class="w-full flex gap-x-2">
+                    <b class="font-[Oswald] text-red-900 bg-sky-500 w-max px-4 py-1 text-3xl rounded-lg">T</b>
+                    <b class="w-full font-[Oswald] text-sky-900 text-4xl">teach<b class="text-red-500">me</b></b>
+                </div>
+                <b class="w-full font-[Poppins] font-normal text-4xl text-white">Connexion</b>
+                <b href="" class="font-normal text-base font-[Poppins] mt-3">
+                    Pas de compte ? <a href="{% url "signup" %}" class="text-sky-900 hover:underline">s'inscrire</a>
+                </b>
+            </div>
+            <form class="w-full h-full px-3 flex flex-col gap-y-9 overflow-auto text-white font-bold font-[Poppins] " action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                
+                <div class="w-full flex flex-col items-start justify-start gap-y-1">
+                    <label for="username" id="username" class="">Nom d'utilisateur</label>
+                    <input type="text" name="username" class="rounded-xl bg-[#0c0c0c] border border-white w-full p-2 text-white font-light">
+                </div>
+
+                <div class="w-full flex flex-col items-start justify-start gap-y-1">
+                    <label for="password" id="password" class="">Mot de passe</label>
+                    <input type="password" name="password" class="rounded-xl bg-[#0c0c0c] border border-white w-full p-2 text-white font-light">
+                </div>
+    
+                <input type="submit" name="submit" value="S'identifier" class="cursor-pointer bg-sky-900 hover:bg-red-600 rounded-xl p-2">
+
+
+                <b class="text-center text-red-500 font-normal text-sm">
+                    {% if messages %}
+                        <ul>
+                            {% for message in messages %}
+                                <li>{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </b>
+            </form>
+        </section>
+    </div>
+
+</body>
+</html>

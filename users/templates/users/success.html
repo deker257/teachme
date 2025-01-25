@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Succès</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    
+</head>
+<body class="bg-[#021024] flex flex-col items-center justify-center text-center h-[100vh]">
+
+    <a href="{% url "homepage" %}" class="fixed top-2 left-2 font-[Oswald] font-extrabold text-red-900 bg-sky-500 w-max px-4 py-1 text-3xl rounded-lg">T</a>
+
+    <div class="flex fixed top-2 right-4">
+        <form method="post" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <button type="submit" class="hover:brightness-75 text-red-500 text-xl rounded-full">
+                <i class="fa-solid fa-power-off"></i>
+            </button>
+        </form>
+    </div>
+
+    <div class="w-20 h-20 rounded-full border overflow-hidden flex items-center justify-center">
+        <img src="{{ profil.url }}" alt="{{ username }}" class="object-cover w-full h-full">
+    </div>
+    
+    <b class="text-white text-2xl">Inscription réussie !</b>
+    <b class="text-white text-sm">Bienvenue à vous <b class="text-red-600 text-sm">@{{ username }}</b></b>
+
+</body>
+</html>

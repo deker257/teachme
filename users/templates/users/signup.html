@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'enregistrement</title>
+
+    <!-- GOOGLE FONTS LINK -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <link rel="icon" href="{% static "image/teachme-icon.png" %}" type="image/x-icon">
+
+    <!-- TAILWIND CSS LINKS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#1E1F20]"> {% comment %}026871 border-8 border-[#021024]{% endcomment %}
+
+    <div class="form-container w-full flex items-center justify-center h-[100vh]">
+        <section class="w-[75%] rounded-3xl flex items-start justify-center bg-[#0E0E0E] h-[70%] overflow-auto py-4 px-3">
+            <div class="flex flex-col pl-3 pt-3 gap-y-3 w-full text-white">
+                <div class="w-full flex gap-x-2">
+                    <b class="font-[Oswald] text-red-900 bg-sky-500 w-max px-4 py-1 text-3xl rounded-lg">T</b>
+                    <b class="w-full font-[Oswald] text-sky-900 text-4xl">teach<b class="text-red-500">me</b></b>
+                </div>
+                <b class="w-full font-[Poppins] font-normal text-4xl text-white mt-5">Inscription</b>
+                <b class="font-normal text-base font-[Poppins] mt-2">Accédez à teachme et profiter de +50,000 tutos et cours gratuits.</b>
+                <b href="" class="font-normal text-base font-[Poppins] mt-4">
+                    Déjà un compte ? <a href="{% url "login" %}" class="text-sky-900 hover:underline">s'identifier</a>
+                </b>
+                <b class="text-center text-red-500 font-normal text-sm">
+                    {% if messages %}
+                        <ul>
+                            {% for message in messages %}
+                                <li>{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </b>
+            </div>
+            <form class="w-full h-full px-4 flex flex-col gap-y-9 overflow-auto text-white font-bold font-[Poppins] " action="" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                
+                <div class="w-full flex flex-col items-start justify-start gap-y-1">
+                    <label for="lastname" id="lastname" class="">Nom</label>
+                    <input type="text" name="lastname" class="rounded-xl bg-[#0c0c0c] border border-white w-full p-2 text-white font-light" required>
+                </div>
+                
+                <div class="w-full flex flex-col items-start justify-start gap-y-1">
+                    <label for="firstname" id="firstname" class="">Prénom</label>
+                    <input type="text" name="firstname" class="rounded-xl bg-[#0c0c0c] border border-white w-full p-2 text-white font-light" required>
+                </div>
+                
+
+                <div class="w-full flex flex-col items-start justify-start gap-y-1">
+                    <label for="birthdate" id="birthdate" class="">Date de naissance</label>
+                    <input type="date" name="birthdate" class="text-black" required>
+                </div>
+
+                <div class="w-full flex flex-col items-start justify-start gap-y-1">
+                    <label for="username" id="username" class="">Nom d'utilisateur</label>
+                    <input type="text" name="username" class="rounded-xl bg-[#0c0c0c] border border-white w-full p-2 text-white font-light" required>
+                </div>
+
+                <div class="w-full flex flex-col items-start justify-start gap-y-1">
+                    <label for="email" id="email" class="">Email</label>
+                    <input type="email" name="email" class="rounded-xl bg-[#0c0c0c] border border-white w-full p-2 text-white font-light" required>
+                </div>
+
+                <div class="w-full flex flex-col items-start justify-start gap-y-1">
+                    {% comment %} <label for="firstname" id="firstname" class=""></label> {% endcomment %}
+                    <div class="flex w-full gap-x-2">
+                        Homme <input type="radio" name="gender" value="homme" class="" required>
+                        Femme <input type="radio" name="gender" value="femme" class="" required>
+                    </div>
+                </div>
+
+                <div class="w-full flex flex-col items-start justify-start gap-y-1">
+                    <label for="origin" id="origin" class="">Origine</label>
+                    <input type="text" name="origin" class="rounded-xl bg-[#0c0c0c] border border-white w-full p-2 text-white font-light" required>
+                </div>
+
+                <div class="w-full flex flex-col items-start justify-start gap-y-1">
+                    <label for="biography" id="biography" class="">Dites-nous qui vous êtes</label>
+                    <textarea name="biography" class="rounded-sm bg-[#0c0c0c] border border-white w-full p-2 text-white font-light" id="biography"></textarea>
+                </div>
+
+                <div class="w-full flex flex-col items-start justify-start gap-y-1">
+                    <label for="sector" id="sector" class="">Secteur</label>
+                    <input type="text" name="sector" class="rounded-xl bg-[#0c0c0c] border border-white w-full p-2 text-white font-light" required>
+                </div>
+
+                <div class="w-full flex flex-col items-start justify-start gap-y-1">
+                    <label for="profile" id="profile" class="">Profil</label>
+                    <input type="file" name="profile" class="" required>
+                </div>
+
+                <div class="w-full flex flex-col items-start justify-start gap-y-1">
+                    <label for="password" id="password" class="">Mot de passe</label>
+                    <input type="password" name="password" class="rounded-xl bg-[#0c0c0c] border border-white w-full p-2 text-white font-light" required>
+                </div>
+
+                <div class="w-full flex flex-col items-start justify-start gap-y-1">
+                    <label for="confirm_password" id="confirm_password" class="">Confirmer mot de passe</label>
+                    <input type="password" name="confirm_password" class="rounded-xl bg-[#0c0c0c] border border-white w-full p-2 text-white font-light" required>
+                </div>
+    
+                <input type="submit" name="submit" value="S'enregistrer" class="cursor-pointer bg-sky-900 hover:bg-red-600 rounded-xl p-2" required>
+            </form>
+        </section>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teachme : Plateforme d'e-learning</title>
+
+    <!-- FAVICON FONTS -->
+    <link rel="icon" href="{% static "image/teachme-icon.png" %}" type="image/x-icon">
+
+    <!-- GOOGLE FONTS LINK -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'users/styles.css' %}">
+
+    <!-- TAILWIND CSS LINKS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<!-- bg-teal-900 bg-white bg-black  leading-tight text-white bg-cyan-900 bg-sky-900-->
+<body class="w-full m-0 p-0 overflow-x-hidden bg-[#111] font-[Poppins]">
+
+    <header class="fixed top-2 left-2 font-[Oswald] flex gap-x-3 z-50">
+        <a href="{% url "channel" %}" class="w-full flex gap-x-2">
+            <b class="font-[Oswald] text-red-900 bg-sky-500 w-max px-4 py-1 text-3xl rounded-lg">T</b>
+            <b class="w-full font-[Oswald] text-sky-900 text-4xl">teach<b class="text-red-500">me</b></b>
+        </a>
+    </header>
+
+    
+    <!-- flex flex-col justify-start items-start max-w-full -->
+    <main class="relative mt-36 flex flex-col w-full items-center justify-start">
+
+        <img src="{% static "image/gif.gif" %}" alt="" class="absolute right-5 top-[-9%] w-72 h-40">
+        <img src="{% static "image/gif-2.gif" %}" alt="" class="absolute left-5 bottom-60 w-72 h-40">
+
+        <form action="" method="post" enctype="multipart/form-data" class="p-2 flex flex-col gap-y-12 text-white">
+
+            <div class="file-container overflow-hidden">
+                <div class="custom-file">
+                    <label for="video-input" class="custom-file-label">Choisir une vidéo</label>
+                    <input type="file" id="video-input" name="video" accept="video/*" required>
+                </div>
+                <div id="video-preview" class="video-preview overflow-hidden order-first">Aucun aperçu disponible</div>
+            </div>
+    
+            <div class="w-full flex flex-col items-start justify-start gap-y-2">
+                <label for="lastname" id="lastname" class="">Titre du cours</label>
+                <input type="text" name="title" class="rounded-md bg-[#0c0c0c] border border-white w-full p-2 text-white font-light font-[Geist]" required>
+            </div>
+
+            <div class="w-full flex flex-col items-start justify-start gap-y-2">
+                <label for="lastname" id="lastname" class="">Description du cours</label>
+                <textarea name="description" class="rounded-md bg-[#0c0c0c] border border-white w-full p-2 text-white font-light font-[Geist]" required></textarea>
+            </div>
+
+            <div class="relative file-container justify-center gap-x-24">
+                <label for="image-input" class="custom-file-label">Choisir une miniature</label>
+                <small class="absolute bottom-12 left-20">(optionnel)</small>
+                <input type="file" name="thumbnail" id="image-input" accept="image/*" class="hidden">
+                <div id="image-preview" class="image-preview overflow-hidden">Aucun aperçu disponible</div>
+            </div>
+              
+            <div class="w-full flex flex-col items-start justify-start gap-y-2">
+                <label for="lastname" id="lastname" class="">Description du cours</label>
+                <select name="category" class="rounded-md bg-[#0c0c0c] border border-white w-full p-2 text-white font-light font-[Geist]" required>
+                    <option value="">--------</option>
+                    <option value="informatique">Informatique</option>
+                    <option value="art">Art</option>
+                    <option value="sport">Sport</option>
+                    <option value="cuisine">Cuisine</option>
+                    <option value="administration-et-onctionnarat">Administration et Fonctionnarat</option>
+                    <option value="couture">Ccouture</option>
+                    <option value="ia">Intelligence artificielle</option>
+                    <option value="combat">Combat</option>
+                    <option value="other">Autre</option>
+                </select>
+            </div>
+
+            <input type="submit" name="publish" value="Publier le cours" class="cursor-pointer bg-sky-900 hover:bg-red-600 rounded-md p-2" required>
+
+        </form>
+
+    </main>
+    
+
+    
+
+    <script src="{% static 'users/script.js' %}"></script>
+</body>
+</html>

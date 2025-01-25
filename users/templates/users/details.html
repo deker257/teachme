@@ -1,0 +1,192 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titre de la vidéo | teachme</title>
+
+    <!-- FAVICON FONTS -->
+    <link rel="icon" href="{% static "image/teachme-icon.png" %}" type="image/x-icon">
+
+    <!-- GOOGLE FONTS LINK -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static "courses/courses-details.css" %}">
+
+    <!-- TAILWIND CSS LINKS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<!-- bg-teal-900 bg-white bg-black  leading-tight text-white bg-cyan-900 bg-sky-900-->
+<body class="w-full m-0 p-0 overflow-x-hidden bg-[#f0f0f0] font-[Poppins]">
+
+    
+    <aside class="bg-black flex flex-col items-center justify-between p-2">
+        <div class="flex items-center justify-center w-full">
+            <a href="#" class="bg-red-500 text-teal-900 py-1 px-4 rounded-lg text-center text-3xl font-extrabold font-[Oswald]">T</a>
+        </div>
+
+        <div class="flex flex-col gap-y-4">
+            
+            <div class="flex flex-col gap-y-1 items-center justify-cente ">
+                <i class="fa-solid fa-book text-xl text-teal-600"></i> 
+                <a href="" class="text-white text-sm font-normal">Tous les cours</a>
+            </div>
+
+            <div class="flex flex-col gap-y-1 items-center justify-cente ">
+                <i class="fa-solid fa-book text-xl text-teal-600"></i> 
+                <a href="" class="text-white text-sm font-normal">Tous les cours</a>
+            </div>
+
+            <div class="flex flex-col gap-y-1 items-center justify-cente ">
+                <i class="fa-solid fa-book text-xl text-teal-600"></i> 
+                <a href="" class="text-white text-sm font-normal">Tous les cours</a>
+            </div>
+        </div>
+
+        <div class="flex flex-col items-center justify-center border-t py-2">
+            <b class="text-white text-center text-xs font-normal">Tous droits réservés &copy; 2024</b>
+        </div>
+    </aside>
+    <!-- flex flex-col justify-start items-start max-w-full -->
+    <main class="bg-white ">
+
+        <section class="courses-section bg-[#f7f7f7] flex flex-col items-center px-3 py-5 gap-y-9">
+
+            <div class="w-full flex items-center justify-between"><b class="text-xl">Tous le cours</b><b class="text-gray-400">21 cours</b></div>
+
+            <div class="courses-cards-container w-full flex flex-col gap-y-4 items-center justify-start px-6 overflow-auto h-full">
+
+                <!-- CARD 1 -->
+                <div class="courses-cards grid grid-cols-[auto_1fr] items-center bg-gradient-to-r from-green-300 to-indigo-300 p-2 drop-shadow-md justify-center rounded-lg gap-x-2">
+                    <div class="img-container w-[150px] h-[96px] block overflow-hidden rounded-lg">
+                        <a href=""><img src="{% static "image/courses/python-2.jpg" %}" alt="" class="w-full h-full object-cover"></a>
+                    </div>
+                    <div class="flex flex-col gap-y-2 items-start justify-center">
+                        <b class="text-sm font-semibold">Apprenez à coder votre premier jeu</b>
+                        <b class="text-xs font-normal">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente tenetur nam, ducimus molestiae natus delectus.</b>
+                        <b class="font-normal text-xs">
+                            <i class="fa-solid fa-star text-teal-600"></i>
+                            <b>4.2</b>
+                        </b>
+                    </div>
+                </div>
+
+                <div class="courses-cards grid grid-cols-[auto_1fr] items-center bg-white p-2 drop-shadow-md justify-center rounded-lg gap-x-2">
+                    <div class="img-container w-[150px] h-[96px] block overflow-hidden rounded-lg">
+                        <a href=""><img src="{% static "image/courses/python-2.jpg" %}" alt="" class="w-full h-full object-cover"></a>
+                    </div>
+                    <div class="flex flex-col gap-y-2 items-start justify-center">
+                        <b class="text-sm font-semibold">Apprenez à coder votre premier jeu</b>
+                        <b class="text-xs font-normal">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente tenetur nam, ducimus molestiae natus delectus.</b>
+                        <b class="font-normal text-xs">
+                            <i class="fa-solid fa-star text-teal-600"></i>
+                            <b>4.2</b>
+                        </b>
+                    </div>
+                </div>
+
+                <div class="courses-cards grid grid-cols-[auto_1fr] items-center bg-white p-2 drop-shadow-md justify-center rounded-lg gap-x-2">
+                    <div class="img-container w-[150px] h-[96px] block overflow-hidden rounded-lg">
+                        <a href=""><img src="{% static "image/courses/python-2.jpg" %}" alt="" class="w-full h-full object-cover"></a>
+                    </div>
+                    <div class="flex flex-col gap-y-2 items-start justify-center">
+                        <b class="text-sm font-semibold">Apprenez à coder votre premier jeu</b>
+                        <b class="text-xs font-normal">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente tenetur nam, ducimus molestiae natus delectus.</b>
+                        <b class="font-normal text-xs">
+                            <i class="fa-solid fa-star text-teal-600"></i>
+                            <b>4.2</b>
+                        </b>
+                    </div>
+                </div>
+
+                <div class="courses-cards grid grid-cols-[auto_1fr] items-center bg-white 0 p-2 drop-shadow-md justify-center rounded-lg gap-x-2">
+                    <div class="img-container w-[150px] h-[96px] block overflow-hidden rounded-lg">
+                        <a href=""><img src="{% static "image/courses/python-2.jpg" %}" alt="" class="w-full h-full object-cover"></a>
+                    </div>
+                    <div class="flex flex-col gap-y-2 items-start justify-center">
+                        <b class="text-sm font-semibold">Apprenez à coder votre premier jeu</b>
+                        <b class="text-xs font-normal">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente tenetur nam, ducimus molestiae natus delectus.</b>
+                        <b class="font-normal text-xs">
+                            <i class="fa-solid fa-star text-teal-600"></i>
+                            <b>4.2</b>
+                        </b>
+                    </div>
+                </div>
+
+                <div class="courses-cards grid grid-cols-[auto_1fr] items-center bg-white p-2 drop-shadow-md justify-center rounded-lg gap-x-2">
+                    <div class="img-container w-[150px] h-[96px] block overflow-hidden rounded-lg">
+                        <a href=""><img src="{% static "image/courses/python-2.jpg" %}" alt="" class="w-full h-full object-cover"></a>
+                    </div>
+                    <div class="flex flex-col gap-y-2 items-start justify-center">
+                        <b class="text-sm font-semibold">Apprenez à coder votre premier jeu</b>
+                        <b class="text-xs font-normal">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente tenetur nam, ducimus molestiae natus delectus.</b>
+                        <b class="font-normal text-xs">
+                            <i class="fa-solid fa-star text-teal-600"></i>
+                            <b>4.2</b>
+                        </b>
+                    </div>
+                </div>
+
+                <div class="courses-cards grid grid-cols-[auto_1fr] items-center bg-white p-2 drop-shadow-md justify-center rounded-lg gap-x-2">
+                    <div class="img-container w-[150px] h-[96px] block overflow-hidden rounded-lg">
+                        <a href=""><img src="{% static "image/courses/python-2.jpg" %}" alt="" class="w-full h-full object-cover"></a>
+                    </div>
+                    <div class="flex flex-col gap-y-2 items-start justify-center">
+                        <b class="text-sm font-semibold">Apprenez à coder votre premier jeu</b>
+                        <b class="text-xs font-normal">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente tenetur nam, ducimus molestiae natus delectus.</b>
+                        <b class="font-normal text-xs">
+                            <i class="fa-solid fa-star text-teal-600"></i>
+                            <b>4.2</b>
+                        </b>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="video-section p-2 flex flex-col gap-y-2">
+            <div class="video-container flex flex-col gap-y-1 items-center justify-center w-full overflow-hidden ">
+                <video src="{% static "video/vid-0.mp4" %}" class="w-full rounded-lg " loop autoplay muted controls></video>
+                <div class="w-full flex items-center justify-start gap-x-4">
+                    <i class="fa-solid fa-star text-teal-600"></i>
+                    <b class="text-teal-600">4.2</b>
+                    <b class="text-gray-400">21 cours</b>
+                </div>
+            </div>
+    
+            <div class="desciption-container flex flex-col items-center justify-center w-full overflow-hidden gap-y-6">
+                <div class="w-full flex flex-col items-start justify-start gap-y-2">
+                    <b class="text-xl">COURS DE PROGRAMMATION EN PYTHON</b>
+                    <b class="text-gray-500 text-xs text-justify font-normal">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, provident porro voluptatem perspiciatis nesciunt labore vitae. Laboriosam, impedit iusto reprehenderit delectus obcaecati architecto at nulla. Nam perferendis harum, eum mollitia modi nihil ullam laborum! Voluptate, id quidem. Facere magnam tempora fuga delectus laudantium excepturi numquam repudiandae voluptatibus totam minima dignissimos alias, nostrum quos eius aperiam omnis exercitationem nulla adipisci laborum!
+                    </b>
+                </div>
+                <div class="profil-container w-full flex items-start justify-start gap-x-2">
+                    <img src="{% static "image/girl-2.jpg" %}" class="w-12 h-12 rounded-full object-cover" alt="">
+                    <div class="profil details flex flex-col">
+                        <b class="prof-name text-sm">John Doe</b>
+                        <b class="metier text-gray-400 text-xs font-normal">Développeur web</b>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+    
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
